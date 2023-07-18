@@ -2,7 +2,6 @@ package findingItem;
 
 import org.opencv.core.Mat;
 import java.io.File;
-
 public class Index {
     public static void main(String[] args) {
         File lib = null;
@@ -27,10 +26,11 @@ public class Index {
         
         // Enter search keywords as parameter for .run(). Scraper then finds and saves the first image from google with this input.
         Crawler scrape = new Crawler();
-        Mat item = scrape.run("Kroger Hamburger Helper Three Cheese Pasta & Sauce Mix Twin Pack");
+        Mat item = scrape.run("Kroger Hamburger Helper Three Cheese Pasta & Sauce Mix Twin Pack Front");
         if (item != null) {
             DisplayImage.display(item);
         }
+        
         
         // Takes in first image from google as the parameter. Then removes unnecessary background image details.
         RemoveBackground test = new RemoveBackground(item);
