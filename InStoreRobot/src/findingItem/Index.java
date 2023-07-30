@@ -1,6 +1,8 @@
 package findingItem;
 
 import org.opencv.core.Mat;
+import org.opencv.highgui.Highgui;
+
 import java.io.File;
 public class Index {
     public static void main(String[] args) {
@@ -24,12 +26,26 @@ public class Index {
         
         
         
-        // Enter search keywords as parameter for .run(). Scraper then finds and saves the first image from google with this input.
+        /* OPTION 1: 
+         * Due to google changing image's displayed by certain searches, The scraper does not always find a correct image for
+         * the search provided. When running the program multiple times, the image found online will vary because of this, limiting accuracy.
+         *
+         * Enter search keywords as parameter for .run(). Scraper then finds and saves the first image from google with this input.
+         */
         Crawler scrape = new Crawler();
         Mat item = scrape.run("Kroger Hamburger Helper Three Cheese Pasta & Sauce Mix Twin Pack Front");
         if (item != null) {
             DisplayImage.display(item);
         }
+        
+        /* OPTION 2: 
+         * No scraper, uncomment lines 41-43, comment out lines 34-37. Takes image from images folder which is predownloaded.
+        Mat item = Highgui.imread("images//hamburgerHelperTest.jpg");
+        if (item != null) {
+            DisplayImage.display(item);
+        }
+         */
+        
         
         
         // Takes in first image from google as the parameter. Then removes unnecessary background image details.

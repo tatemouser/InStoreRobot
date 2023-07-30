@@ -14,7 +14,7 @@ import javax.swing.WindowConstants;
 import org.opencv.core.Mat;
 
 public class DisplayImage {
-    
+
 	public static void display(Mat image) {
 	    String windowName = "image";
 	    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
