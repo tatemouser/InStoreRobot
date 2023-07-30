@@ -1,7 +1,6 @@
 package findingItem;
 
 import org.opencv.core.Mat;
-import org.opencv.highgui.Highgui;
 
 import java.io.File;
 public class Index {
