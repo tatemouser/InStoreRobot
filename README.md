@@ -32,7 +32,7 @@ This project was designed for a robot grocery cart that locates items within the
 
      <img src=https://github.com/tatemouser/InStoreRobot/assets/114375692/d890bc16-2809-4350-acf7-ac993f6ba038 alt="Original Image" width="500" height="300">
 
-         The target item and the store shelf image are then scanned to identify their keypoints (patterns, edges, corners). The program matches the keypoints and applies a homography matrix to account for tilt in         the image of the item or the camera. Once complete, the program draws a green box around the located item and displays the result using the SWT
+         The green box drawn comes from the target item and the store shelf image being scanned to identify their keypoints (patterns, edges, corners). The program matches the keypoints and applies a homography matrix to account for tilt in the image of the item or the camera. Once complete, the program draws a green box around the located item and displays the result using the SWT
      
 
 ## Features
